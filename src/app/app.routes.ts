@@ -28,6 +28,9 @@ export const routes: Routes = [
       import('./pages/view-post/view-post.component').then(
         (m) => m.ViewPostComponent
       ),
+    data: {
+      prerender: false
+    }
   },
   {
     path: 'auth',
