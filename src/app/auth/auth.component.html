@@ -1,0 +1,26 @@
+<div class="auth-wrapper">
+  <mat-card>
+    <h2>Log in</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email or username</mat-label>
+        <input matInput formControlName="email" type="email" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" required />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="!loginForm.valid">
+        Log in
+      </button>
+    </form>
+
+    <div class="auth-links">
+      <a routerLink="/auth/forgot-password">Forgot password?</a>
+      <a routerLink="/auth/signup">Sign up</a>
+    </div>
+  </mat-card>
+</div>
